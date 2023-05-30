@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "botania:terrasteel_ingot"
+    },
+    "S": {
+      "item": "botania:livingwood_twig"
+    }
+  },
+  "pattern": [
+    " M",
+    "S "
+  ],
+  "result": {
+    "item": "botanical_complement:terrasteel_knife"
+  }
+}

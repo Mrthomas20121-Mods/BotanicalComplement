@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "botania:elementium_ingot"
+    },
+    "S": {
+      "item": "botania:dreamwood_twig"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MSM",
+    " S "
+  ],
+  "result": {
+    "item": "botanical_complement:elementium_hammer"
+  }
+}
