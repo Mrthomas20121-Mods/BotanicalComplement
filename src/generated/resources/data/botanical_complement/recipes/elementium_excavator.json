@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
+    "B": {
+      "item": "botania:elementium_block"
+    },
     "M": {
       "item": "botania:elementium_ingot"
     },
@@ -9,7 +12,7 @@
     }
   },
   "pattern": [
-    " M ",
+    " B ",
     "MSM",
     " S "
   ],

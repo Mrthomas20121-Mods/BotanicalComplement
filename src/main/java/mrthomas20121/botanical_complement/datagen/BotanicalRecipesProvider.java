@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import vazkii.botania.common.block.BotaniaBlocks;
 import vazkii.botania.common.item.BotaniaItems;
 
 import java.util.function.Consumer;
@@ -22,13 +23,13 @@ public class BotanicalRecipesProvider extends RecipeProviderCoFH {
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 
-        excavatorRecipe(consumer, BotanicalComplementItems.MANASTEEL_EXCAVATOR.get(), BotaniaItems.manaSteel, BotaniaItems.livingwoodTwig);
-        excavatorRecipe(consumer, BotanicalComplementItems.ELEMENTIUM_EXCAVATOR.get(), BotaniaItems.elementium, BotaniaItems.dreamwoodTwig);
-        excavatorRecipe(consumer, BotanicalComplementItems.TERRASTEEL_EXCAVATOR.get(), BotaniaItems.terrasteel, BotaniaItems.livingwoodTwig);
+        excavatorRecipe(consumer, BotanicalComplementItems.MANASTEEL_EXCAVATOR.get(), BotaniaBlocks.manasteelBlock, BotaniaItems.manaSteel, BotaniaItems.livingwoodTwig);
+        excavatorRecipe(consumer, BotanicalComplementItems.ELEMENTIUM_EXCAVATOR.get(), BotaniaBlocks.elementiumBlock, BotaniaItems.elementium, BotaniaItems.dreamwoodTwig);
+        excavatorRecipe(consumer, BotanicalComplementItems.TERRASTEEL_EXCAVATOR.get(), BotaniaBlocks.terrasteelBlock, BotaniaItems.terrasteel, BotaniaItems.livingwoodTwig);
 
-        hammerRecipe(consumer, BotanicalComplementItems.MANASTEEL_HAMMER.get(), BotaniaItems.manaSteel, BotaniaItems.livingwoodTwig);
-        hammerRecipe(consumer, BotanicalComplementItems.ELEMENTIUM_HAMMER.get(), BotaniaItems.elementium, BotaniaItems.dreamwoodTwig);
-        hammerRecipe(consumer, BotanicalComplementItems.TERRASTEEL_HAMMER.get(), BotaniaItems.terrasteel, BotaniaItems.livingwoodTwig);
+        hammerRecipe(consumer, BotanicalComplementItems.MANASTEEL_HAMMER.get(), BotaniaBlocks.manasteelBlock, BotaniaItems.manaSteel, BotaniaItems.livingwoodTwig);
+        hammerRecipe(consumer, BotanicalComplementItems.ELEMENTIUM_HAMMER.get(), BotaniaBlocks.elementiumBlock, BotaniaItems.elementium, BotaniaItems.dreamwoodTwig);
+        hammerRecipe(consumer, BotanicalComplementItems.TERRASTEEL_HAMMER.get(), BotaniaBlocks.terrasteelBlock, BotaniaItems.terrasteel, BotaniaItems.livingwoodTwig);
 
         sickleRecipe(consumer, BotanicalComplementItems.MANASTEEL_SICKLE.get(), BotaniaItems.manaSteel, BotaniaItems.livingwoodTwig);
         sickleRecipe(consumer, BotanicalComplementItems.ELEMENTIUM_SICKLE.get(), BotaniaItems.elementium, BotaniaItems.dreamwoodTwig);
@@ -46,9 +47,10 @@ public class BotanicalRecipesProvider extends RecipeProviderCoFH {
                 .unlockedBy(getHasName(material), has(material));
     }
 
-    public void hammerRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item material, Item stick) {
+    public void hammerRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, ItemLike block, Item material, Item stick) {
         toolRecipe(output, material, stick)
-                .pattern("MMM")
+                .define('B', block)
+                .pattern("MBM")
                 .pattern("MSM")
                 .pattern(" S ")
                 .save(consumer);
@@ -62,9 +64,10 @@ public class BotanicalRecipesProvider extends RecipeProviderCoFH {
                 .save(consumer);
     }
 
-    public void excavatorRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item material, Item stick) {
+    public void excavatorRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, ItemLike block, Item material, Item stick) {
         toolRecipe(output, material, stick)
-                .pattern(" M ")
+                .define('B', block)
+                .pattern(" B ")
                 .pattern("MSM")
                 .pattern(" S ")
                 .save(consumer);
