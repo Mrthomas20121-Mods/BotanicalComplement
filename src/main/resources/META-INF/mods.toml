@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/Mrthomas20121-Mods/BotanicalComplement/iss
 
 [[mods]]
 modId = "botanical_complement"
-version = "1.0.2"
+version = "1.0.0"
 displayName = "Botanical Complement"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/botanical_complement"
 #logoFile="tinkers_reforged_logo.png"
