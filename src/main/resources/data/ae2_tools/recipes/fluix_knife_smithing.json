@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "ae2_tools:certus_quartz_knife"
+  },
+  "addition": {
+    "item": "ae2:fluix_block"
+  },
+  "result": {
+    "item": "ae2_tools:fluix_knife"
+  }
+}

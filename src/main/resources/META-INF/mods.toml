@@ -1,0 +1,30 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "MIT License"
+issueTrackerURL = "https://github.com/Mrthomas20121-Mods/BotanicalComplement/issues"
+
+[[mods]]
+modId = "botanical_complement"
+version = "1.0.2"
+displayName = "Botanical Complement"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/botanical_complement"
+#logoFile="tinkers_reforged_logo.png"
+credits = "Team CoFH"
+authors = "Mrthomas20121"
+description = '''
+Add tools complement tools to AE2
+'''
+
+[[dependencies.botanical_complement]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[43.1.1,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.botanical_complement]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.19.2,)"
+    ordering = "NONE"
+    side = "BOTH"

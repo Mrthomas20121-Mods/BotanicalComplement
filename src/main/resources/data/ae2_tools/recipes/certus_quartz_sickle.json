@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "tag": "forge:gems/certus_quartz"
+    }
+  },
+  "pattern": [
+    " X ",
+    "  X",
+    "#X "
+  ],
+  "result": {
+    "item": "ae2_tools:certus_quartz_sickle"
+  }
+}

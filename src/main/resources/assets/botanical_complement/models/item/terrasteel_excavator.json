@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "botanical_complement:item/terrasteel_excavator"
+  }
+}
