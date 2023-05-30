@@ -24,7 +24,7 @@ archivesBaseName = 'Botanical Complement 1.19.2'
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: '1.19.2'
 
     runs {
         client {
@@ -123,7 +123,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
-    implementation(fg.deobf("appeng:appliedenergistics2-forge:${ae2_version}"))
+    implementation fg.deobf("vazkii.botania:Botania:1.19.2-436-FORGE")
 
     // compile against the JEI API but do not include it at runtime
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
@@ -137,6 +137,10 @@ dependencies {
     implementation fg.deobf("com.teamcofh:thermal_core:${mc_version}-${thermal_core_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_expansion:${mc_version}-${thermal_expansion_version}.+")
     implementation fg.deobf("curse.maven:tools-complement-552642:4382367")
+
+    implementation fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77")
+
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0")
 }
 
 jar {
