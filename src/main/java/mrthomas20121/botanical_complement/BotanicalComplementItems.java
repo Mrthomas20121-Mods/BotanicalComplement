@@ -28,4 +28,9 @@ public class BotanicalComplementItems {
     public static RegistryObject<Item> TERRASTEEL_HAMMER = ITEMS.register("terrasteel_hammer", ElementiumlHammerItem::new);
     public static RegistryObject<Item> TERRASTEEL_KNIFE = ITEMS.register("terrasteel_knife", ElementiumlKnifeItem::new);
     public static RegistryObject<Item> TERRASTEEL_SICKLE = ITEMS.register("terrasteel_sickle", ElementiumlSickleItem::new);
+
+    public static RegistryObject<Item> ALFSTEEL_EXCAVATOR = ITEMS.register("alfsteel_excavator", ElementiumlExcavatorItem::new);
+    public static RegistryObject<Item> ALFSTEEL_HAMMER = ITEMS.register("alfsteel_hammer", ElementiumlHammerItem::new);
+    public static RegistryObject<Item> ALFSTEEL_KNIFE = ITEMS.register("alfsteel_knife", ElementiumlKnifeItem::new);
+    public static RegistryObject<Item> ALFSTEEL_SICKLE = ITEMS.register("alfsteel_sickle", ElementiumlSickleItem::new);
 }

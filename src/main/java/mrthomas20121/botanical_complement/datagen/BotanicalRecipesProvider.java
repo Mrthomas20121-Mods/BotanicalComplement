@@ -3,12 +3,18 @@ package mrthomas20121.botanical_complement.datagen;
 import cofh.lib.data.RecipeProviderCoFH;
 import mrthomas20121.botanical_complement.BotanicalComplement;
 import mrthomas20121.botanical_complement.BotanicalComplementItems;
+import mythicbotany.register.ModBlocks;
+import mythicbotany.register.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.UpgradeRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 import vazkii.botania.common.block.BotaniaBlocks;
 import vazkii.botania.common.item.BotaniaItems;
 
@@ -38,6 +44,15 @@ public class BotanicalRecipesProvider extends RecipeProviderCoFH {
         knifeRecipe(consumer, BotanicalComplementItems.MANASTEEL_KNIFE.get(), BotaniaItems.manaSteel, BotaniaItems.livingwoodTwig);
         knifeRecipe(consumer, BotanicalComplementItems.ELEMENTIUM_KNIFE.get(), BotaniaItems.elementium, BotaniaItems.dreamwoodTwig);
         knifeRecipe(consumer, BotanicalComplementItems.TERRASTEEL_KNIFE.get(), BotaniaItems.terrasteel, BotaniaItems.livingwoodTwig);
+
+        alfsteelSmithing(withConditions(consumer).addCondition(new ModLoadedCondition("mythicbotany")), BotanicalComplementItems.TERRASTEEL_EXCAVATOR.get(), BotanicalComplementItems.ALFSTEEL_EXCAVATOR.get());
+        alfsteelSmithing(withConditions(consumer).addCondition(new ModLoadedCondition("mythicbotany")), BotanicalComplementItems.TERRASTEEL_HAMMER.get(), BotanicalComplementItems.ALFSTEEL_HAMMER.get());
+        alfsteelSmithing(withConditions(consumer).addCondition(new ModLoadedCondition("mythicbotany")), BotanicalComplementItems.TERRASTEEL_SICKLE.get(), BotanicalComplementItems.ALFSTEEL_SICKLE.get());
+        alfsteelSmithing(withConditions(consumer).addCondition(new ModLoadedCondition("mythicbotany")), BotanicalComplementItems.TERRASTEEL_KNIFE.get(), BotanicalComplementItems.ALFSTEEL_KNIFE.get());
+    }
+
+    protected static void alfsteelSmithing(Consumer<FinishedRecipe> p_125995_, Item p_125996_, Item p_125997_) {
+        UpgradeRecipeBuilder.smithing(Ingredient.of(p_125996_), Ingredient.of(ModItems.alfsteelIngot), p_125997_).unlocks("has_alfsteel_ingot", has(ModItems.alfsteelIngot)).save(p_125995_, getItemName(p_125997_) + "_smithing");
     }
 
     public ShapedRecipeBuilder toolRecipe(ItemLike output, Item material, Item stick) {

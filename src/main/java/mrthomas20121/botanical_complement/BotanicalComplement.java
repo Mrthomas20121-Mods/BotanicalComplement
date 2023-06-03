@@ -1,6 +1,6 @@
 package mrthomas20121.botanical_complement;
 
-import mrthomas20121.botanical_complement.datagen.BotanicalRecipesProvider;
+//import mrthomas20121.botanical_complement.datagen.BotanicalRecipesProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +22,6 @@ public class BotanicalComplement {
 	}
 
 	public void datagen(GatherDataEvent event) {
-		event.getGenerator().addProvider(event.includeServer(), new BotanicalRecipesProvider(event.getGenerator()));
+		//event.getGenerator().addProvider(event.includeServer(), new BotanicalRecipesProvider(event.getGenerator()));
 	}
 }

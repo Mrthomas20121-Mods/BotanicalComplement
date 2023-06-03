@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "mythicbotany:alfsteel_ingot"
+  },
+  "base": {
+    "item": "botanical_complement:terrasteel_sickle"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mythicbotany"
+    }
+  ],
+  "result": {
+    "item": "botanical_complement:alfsteel_sickle"
+  }
+}
